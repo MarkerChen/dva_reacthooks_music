@@ -1,15 +1,14 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect } from "react";
 import Slider from "@/components/Recommend/Slider/index";
 import RecommendList from "@/components/Recommend/RecommendList/index";
 import Scroll from "@/components/Common/Scroll/index";
 import Loading from "@/components/Common/Loading/index";
 import { Content } from "./style";
-import { getBannerRequest } from "./service";
 import { connect } from "dva";
 import { forceCheck } from "react-lazyload";
 
 function Recommend(props) {
-  const { bannerList, recommendList, songsCount } = props;
+  const { bannerList, recommendList } = props;
 
   const { getBannerDataDispatch, getRecommendListDataDispatch } = props;
   //数据列表在加载状态

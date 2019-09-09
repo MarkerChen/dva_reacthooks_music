@@ -1,12 +1,18 @@
 import React from "react";
 import { LoadingWrapper } from "./style";
 
-function Loading() {
+function Loading(props) {
+  const show = props.show === undefined ? true : props.show;
+  console.log("loading props show ", props.show, "new show", show);
   return (
-    <LoadingWrapper>
-      <div></div>
-      <div></div>
-    </LoadingWrapper>
+    <div>
+      {show ? (
+        <LoadingWrapper>
+          <div></div>
+          <div></div>
+        </LoadingWrapper>
+      ) : null}
+    </div>
   );
 }
 

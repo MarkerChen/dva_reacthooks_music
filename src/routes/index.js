@@ -1,10 +1,18 @@
-import React from "react";
 import { Redirect } from "react-router-dom";
-import Home from "./Home/index";
+import React, { lazy, Suspense } from "react";
 import Recommend from "./Recommend/index";
 import Singers from "./Singers/index";
 import Rank from "./Rank/index";
 
+const HomeComponent = lazy(() => import("./Home/index"));
+
+const Home = props => {
+  return (
+    <Suspense fallback={null}>
+      <HomeComponent {...props}></HomeComponent>
+    </Suspense>
+  );
+};
 export default [
   {
     path: "/",
