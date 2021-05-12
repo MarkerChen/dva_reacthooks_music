@@ -18,7 +18,7 @@
     "react-lazyload": "^2.6.2",
     "react-router-config": "^5.0.1",
     "styled-components": "^4.3.2",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "babel-plugin-dva-hmr": "^0.3.2",
